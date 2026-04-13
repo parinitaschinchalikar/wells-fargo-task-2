@@ -14,7 +14,7 @@ public class Portfolio
 
     @OneToOne
     @JoinColumn(name ="clientId", nullable=false, unique = true)
-    private Client Client;
+    private Client client;
 
     @Column(nullable = false)
     private LocalDate creationDate;
@@ -36,7 +36,7 @@ public class Portfolio
     }
 
     public Client getClient() {
-        return Client;
+        return client;
     }
 
     public LocalDate getCreationDate() {
